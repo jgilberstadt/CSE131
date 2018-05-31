@@ -9,9 +9,11 @@ public class Ordered {
 	 */
 	public static void main(String[] args) {
 		ArgsProcessor ap = new ArgsProcessor(args);
-		int x = ap.nextInt("Value for x?");
-		int y = ap.nextInt("Value for y?");
-		int z = ap.nextInt("Value for z?");
+		int x = ap.nextInt("Enter 5");
+		int y = ap.nextInt("Enter 4");
+		int z = ap.nextInt("Enter 3");
+boolean isOrdered= ((x > y) && (y > z)) || ((x < y) && (y < z));
+		System.out.println(isOrdered);
 
 	}
 
