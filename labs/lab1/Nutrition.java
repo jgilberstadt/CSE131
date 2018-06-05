@@ -13,8 +13,10 @@ public class Nutrition {
 		String t1 = String.valueOf(Float.valueOf(s1) * 4);
 		String t2 = String.valueOf(Float.valueOf(s2) * 9);
 		String t3 = String.valueOf(Float.valueOf(s3) * 4);
-		String t4 = String.valueOf(Float.valueOf(s4) - Float.valueOf(t1) - Float.valueOf(t2) - Float.valueOf(t3));
+		String t4 = String.valueOf(-Float.valueOf(s4) + Float.valueOf(t1) + Float.valueOf(t2) + Float.valueOf(t3));
 		String t5 = String.valueOf(Float.valueOf(t4) / 4);
+		double roundOff5 = (double) Math.round(Float.valueOf(t4) * 10) / 10;
+		double roundOff4 = (double) Math.round(Float.valueOf(t5) * 10) / 10;
 		double a = (double) (Float.valueOf(t1) * 100 / (Float.valueOf(t1) + Float.valueOf(t2) + Float.valueOf(t3)));
 		double roundOff1 = (double) Math.round (a * 10) / 10;
 		System.out.println(s0 + " has ");
@@ -23,7 +25,7 @@ public class Nutrition {
 		System.out.println(s3 + " grams of protein " + "= " + t3 + " Calories");
 		System.out.println();
 		System.out.println("This food is said to have " + s4 + " (available) Calories.");
-		System.out.println("With " + t4 + " unavaliable Calories, this food has " + t5 + " grams of fiber");
+		System.out.println("With " + roundOff5 + " unavaliable Calories, this food has " + roundOff4 + " grams of fiber");
 		System.out.println();
 		System.out.println("Approximately");
 		System.out.println("  " + roundOff1 + " % of your food is carbohydrates");
