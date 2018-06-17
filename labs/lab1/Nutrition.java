@@ -40,8 +40,7 @@ public class Nutrition {
 		System.out.println("This food is acceptable for a low-carb diet?  " + isOrdered1);
 		boolean isOrdered2 = b <= 15.0;
 		System.out.println("This food is acceptable for a low-fat diet?  " + isOrdered2);
-		int randomNumber = (int) (1 + Math.random() * 2);
-        boolean isOrdered3 = randomNumber > 1.5;
+        boolean isOrdered3 = Math.random() > 0.5;
 		System.out.println("By coin flip, you should eat this food?   " + isOrdered3);
 	 
 

@@ -5,7 +5,9 @@ public class Pi {
 		     
 	int a = (int) (Math.random()*2)-1;
 	int b = (int) (Math.random()*2)-1;
-	int c = 	  
+	int c = (int) Math.sqrt(Math.pow(a, 2)+ Math.pow(b, 2));
+	
+	
 
 		     System.out.println("Our group shows Pi = " + ans);
 		  
