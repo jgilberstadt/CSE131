@@ -16,7 +16,7 @@ public class SieveOfEratosthenes {
 		for (j = 4; (j <= arraySize); j++) {   
 			for (i = 2; i <= j/2; i++){ 
 				if (array[j] % i == 0){           
-					System.out.println(j + " is not a prime number");
+					System.out.println(j + " isn't a prime number");
 				}
 		}
 		}
