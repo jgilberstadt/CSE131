@@ -16,6 +16,9 @@ public class Dice {
 		int n = 0;
 		int o;
 		int p = 0;
+		int q;
+		int r;
+		int[] sum = new int[6 * numberOfDice];
 	if ((numberOfDice > 0) && (timesThrown > 0)) {
 	for (i = 0; i < (timesThrown); i++) {
 	int[] dice = new int[numberOfDice];
@@ -26,7 +29,8 @@ public class Dice {
 		for (int temp : dice) {
 	System.out.println(temp);
 }
-	System.out.println("Sum of dice values =" + p);
+	sum[p] = sum[p] + 1;
+		System.out.println("Sum of dice values =" + p);
 	p = 0;
 	for (k = 0; k < (numberOfDice); k++) {	
 	for (l = 0; l < (numberOfDice); l++ ) {
@@ -41,6 +45,10 @@ public class Dice {
 }
 	o = 100 * n / (timesThrown);
 System.out.println("The dice all showed the same value " + o + "% of the time");
+for (q = numberOfDice; q <= (6 * numberOfDice); q++) {
+	r = 100 * (sum [q - 1]) / timesThrown;
+	System.out.println("Sum " + q + " occurred " + r + "% of the time");
+}
 }
 }
 }
