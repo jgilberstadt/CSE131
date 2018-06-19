@@ -47,7 +47,9 @@ public class Dice {
 System.out.println("The dice all showed the same value " + o + "% of the time");
 for (q = numberOfDice; q <= (6 * numberOfDice); q++) {
 	r = 100 * (sum [q]) / timesThrown;
+	if (sum[q] != 0 ) {
 	System.out.println("Sum " + (q) + " occurred " + r + "% of the time");
+}
 }
 }
 }
