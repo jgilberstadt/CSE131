@@ -37,10 +37,10 @@ public class Dice {
 	if ((dice[l] == dice[k])) {
 	m = m + 1;
 	}
-	}
-}
 	if (m == (numberOfDice * numberOfDice)) {
 	n = n + 1;
+	}
+	}
 }
 }
 	o = 100 * n / (timesThrown);
