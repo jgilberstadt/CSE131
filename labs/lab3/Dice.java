@@ -45,9 +45,9 @@ public class Dice {
 }
 	o = 100 * n / (timesThrown);
 System.out.println("The dice all showed the same value " + o + "% of the time");
-for (q = numberOfDice; q <= (6 * numberOfDice); q++) {
-	r = 100 * (sum [q - 1]) / timesThrown;
-	System.out.println("Sum " + q + " occurred " + r + "% of the time");
+for (q = numberOfDice; q <= (6 * numberOfDice + 1); q++) {
+	r = 100 * (sum [q]) / timesThrown;
+	System.out.println("Sum " + (q) + " occurred " + r + "% of the time");
 }
 }
 }
