@@ -8,9 +8,18 @@ public class Dice {
 		ArgsProcessor ap = new ArgsProcessor(args);
 		int numberOfDice = ap.nextInt("Number of dice?");
 		int timesThrown = ap.nextInt("Number of times dice are thrown?");
-		System.out.println(numberOfDice);
-		System.out.println(timesThrown);
+		int i;
+		int j;
+	if ((numberOfDice > 0) && (timesThrown > 0)) {
+	for (i = 0; i < (timesThrown); i++) {
+	int[] dice = new int[numberOfDice];
+	for (j = 0; j < (numberOfDice); j++ ) {
+		dice[j] = (int) (6 * Math.random() + 1);
 	}
-	
-
+		for (int temp : dice) {
+	System.out.println(temp);
+}
+}
+}
+}
 }
