@@ -21,6 +21,7 @@ public class Dice {
 		int[] sum = new int[6 * numberOfDice + 1];
 	if ((numberOfDice > 0) && (timesThrown > 0)) {
 	for (i = 0; i < (timesThrown); i++) {
+		m = 0;
 	int[] dice = new int[numberOfDice];
 	for (j = 0; j < (numberOfDice); j++ ) {
 		dice[j] = (int) (6 * Math.random() + 1);
@@ -37,11 +38,11 @@ public class Dice {
 	if ((dice[l] == dice[k])) {
 	m = m + 1;
 	}
+	}
+	}
 	if (m == (numberOfDice * numberOfDice)) {
 	n = n + 1;
 	}
-	}
-}
 }
 	o = 100 * n / (timesThrown);
 System.out.println("The dice all showed the same value " + o + "% of the time");
