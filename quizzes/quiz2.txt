@@ -1,0 +1,17 @@
+"int j;
+for (j = 1; j <=8; j++){
+int n = (j * 4);
+System.out.println(n);
+}"
+
+"if (((x == y) && (x != z) && (y != z)) || ((x != y) && (x == z) && (x != y)) || ((x != y) && (x != z) && (y == z))) {
+System.out.println(""Two Match"");	
+}else {
+System.out.println(""No match"");
+}"
+
+This solution will work, but consider that you could simplify things a bit more. For example, with ((x == y) && (x != z) && (y != z)), stating y != z is redundant, because you have already checked that x == y and x != z, so it would not be possible for y == z.
+
+Great job!
+
+Total: 100 / 100
