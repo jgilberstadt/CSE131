@@ -11,7 +11,7 @@ public class SpeedLimit {
 		int over = carSpeed - speedLimit;
 		int fine = (carSpeed >= (speedLimit + 10)) ? (50 + 10 * (carSpeed - (speedLimit + 10))) : 0;
 		System.out.println("You reported a speed of " + carSpeed + " MPH for a speed limit of " + speedLimit + " MPH.");
-		System.out.println("You went " + over + " MPH over the speed limit. Your fine is $" + fine + ".");
+		System.out.println("You went" + over + " MPH over the speed limit. Your fine is $" + fine + ".");
 		
 
 	}
