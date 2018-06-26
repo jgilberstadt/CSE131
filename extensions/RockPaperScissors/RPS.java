@@ -15,6 +15,6 @@ i = i + 1;
 j = j + 1;	
 }
 }
-System.out.println("The random player won " + i + " times out of 1000, the faithfully rotating player won " + j + " times out of 100 and there were " + (1000 - i - j) + " ties.");
+System.out.println("The random player won " + i + " times out of 1000, the faithfully rotating player won " + j + " times out of 1000 and there were " + (1000 - i - j) + " ties.");
 }
 }

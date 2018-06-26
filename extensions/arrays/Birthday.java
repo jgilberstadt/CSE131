@@ -39,7 +39,7 @@ public class Birthday {
 		System.out.println("% of people born in October: " + (100 * month[9] / people) + "%");
 		System.out.println("% of people born in November: " + (100 * month[10] / people) + "%");
 		System.out.println("% of people born in December: " + (100 * month[11] / people) + "%");
-		System.out.println("Average % of people born per month: " + (100 * people / 12) + "%");
+		System.out.println("Average % of people born per month: " + (100 * ((month[0] / people) + (month[1] / people) + (month[2] / people) + (month[3] / people) + (month[4] / people) + (month[5] / people) + (month[6] / people) + (month[7] / people) + (month[8] / people) + (month[9] / people) + (month[10] / people) + (month[11] / people)) / 12) + "%");
 		int a;
 		int b;
 		for (b = 0; b < 31; b++) {
