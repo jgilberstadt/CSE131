@@ -44,13 +44,13 @@ public class Filters {
 	 *the first source image to the target panel.  
 	 *(Hint: This is a very simple method.)**/
 	public static int copy(int pixelComponent) {
-		return 0;  // FIXME
+		return pixelComponent;  // FIXME
 	}
 
 	//This method averages the color components of two pixels.
 	// USED IN: composite
 	public static int composite(int a, int b) {
-		return 0;  // FIXME
+		return (a + b)/2;  // FIXME
 	}
 
 	//This method returns the negative of a pixel by inverting its color components.
