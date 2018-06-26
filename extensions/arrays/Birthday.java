@@ -39,15 +39,13 @@ public class Birthday {
 		System.out.println("% of people born in October: " + (100 * month[9] / people) + "%");
 		System.out.println("% of people born in November: " + (100 * month[10] / people) + "%");
 		System.out.println("% of people born in December: " + (100 * month[11] / people) + "%");
-		System.out.println("Average % of people born per month: " + ((month[0] + month[1] + month[2] + month[3] + month[4] + month[5] + month[6] + month[7] + month[8] + month[9] + month[10] + month[11]) / 12) + "%");
+		System.out.println("Average % of people born per month: " + (100 * people / 12) + "%");
 		int a;
 		int b;
-		int k = 0;
 		for (b = 0; b < 31; b++) {
 		System.out.println("% of people born on day " + (b + 1) + " of the month: " + (100 * day[b] / people) + "%");
-		k = k + day[b];
 		}
-		System.out.println("Average % of people born per day: " + (100 * k / 31) + "%");
+		System.out.println("Average % of people born per day: " + (100 * people / 31) + "%");
 	System.out.println("% of people who were born on exactly the same day: " + (100 * o / people) + "%");
 	}
 }
