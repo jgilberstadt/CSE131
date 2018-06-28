@@ -1,0 +1,19 @@
+a[2] = 14;	
+System.out.println(y[y.length-1]);	
+boolean[] array = new boolean[10];	
+"int n = 0;
+int a;
+int b;
+for (a = 0; a < values.length; a++){
+for (b = 0; b < values[a].length; b++) {
+		if (values[a][b] > 0.7){
+		n = n + 1;
+		}
+		}
+		}"
+
+It is interesting that you would consider this array to be a 2d array - the problem doesn't state this and a 1d array would have been fine.
+
+Either way, your code works well. Great job!
+
+Total: 100 / 100
