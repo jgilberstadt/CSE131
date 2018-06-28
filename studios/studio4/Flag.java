@@ -4,6 +4,8 @@ import java.awt.Color;
 
 import java.awt.font.*;
 
+import sedgewick.StdAudio;
+
 import sedgewick.StdDraw;
 
 public class Flag {
@@ -29,6 +31,48 @@ public class Flag {
 	for (i = 0; i < 6; i++) {
 	StdDraw.text(.25 + (i * .1), .7 - (.1 * i), "United Gilberstadt Republic");
 	}
+	int n = 44100;
+	double hz = 440.0;
+	double[] a = new double[(n * 8) + 1];
+	int j;
+	for (j = 0; j <= n; j++) {
+		a[j] = Math.sin(2 * Math.PI * j * hz / n);
+		}
+	StdAudio.play(a);
+	hz = (double)hz * Math.pow(2, (double)(1/12));
+	for (j = 0; j <= n; j++) {
+		a[j] = Math.sin(2 * Math.PI * j * hz / n);
+		}
+	StdAudio.play(a);
+	hz = (double) hz * Math.pow(2, (double)(1/12));
+	for (j = 0; j <= n; j++) {
+		a[j] = Math.sin(2 * Math.PI * j * hz / n);
+		}
+	StdAudio.play(a);
+	hz = (double)hz * Math.pow(2, (double)(1/12));
+	for (j = 0; j <= n; j++) {
+		a[j] = Math.sin(2 * Math.PI * j * hz / n);
+		}
+	StdAudio.play(a);
+	hz = (double)hz * Math.pow(2, (double)(1/12));
+	for (j = 0; j <= n; j++) {
+		a[j] = Math.sin(2 * Math.PI * j * hz / n);
+		}
+	StdAudio.play(a);
+	hz = (double)hz * Math.pow(2, (double)(1/12));
+	for (j = 0; j <= n; j++) {
+		a[j] = Math.sin(2 * Math.PI * j * hz / n);
+		}
+	StdAudio.play(a);
+	hz = (double)hz * Math.pow(2, (double)(1/12));
+	for (j = 0; j <= n; j++) {
+		a[j] = Math.sin(2 * Math.PI * j * hz / n);
+		}
+	StdAudio.play(a);
+	hz = (double)hz * Math.pow(2, (double)(1/12));
+	for (j = 0; j <= n; j++) {
+		a[j] = Math.sin(2 * Math.PI * j * hz / n);
+		}
+	StdAudio.play(a); 
 	}
-
-}
+	}
