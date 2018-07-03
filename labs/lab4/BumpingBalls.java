@@ -16,7 +16,7 @@ public class BumpingBalls {
 	if ((balls >= 1) && (balls <= 10)) {
 		StdDraw.setXscale(-1.0, 1.0);
         StdDraw.setYscale(-1.0, 1.0);
-        
+        StdDraw.enableDoubleBuffering();
         double[] velocityx = new double[balls];
         double[] velocityy = new double[balls];
         double[] positionx = new double[balls];
@@ -42,7 +42,7 @@ public class BumpingBalls {
           double posy = (Math.random() * .9) + .05;
             positiony[d] = posy;
              }
-        while (true)  { 
+        while (true)  {
             int f;
         	for (f = 0; f < balls; f++) {
         	if (Math.abs(positionx[f] + velocityx[f]) > 1.0 - radius) { 
@@ -56,9 +56,8 @@ public class BumpingBalls {
         	}
         	int g;
         	int h;
-        	int i;
-        	for (g = 1; g < balls; g++) {
-        	for (h = 0; h < balls - g; h++) {
+        	for (g = 0; g <= balls - 2; g++) {
+        	for (h = g + 1; h <= balls - 1; h++) {
         	if (Math.sqrt(Math.abs(Math.pow(positionx[g] + velocityx[g]- positionx[h] - velocityx[h], 2) + Math.pow(positiony[g] + velocityy[g]- positiony[h] - velocityy[h], 2))) < 2 * radius) {
         	velocityx[g] = -1 * velocityx[g];
         	velocityy[g] = -1 * velocityy[g];
@@ -72,8 +71,8 @@ public class BumpingBalls {
             int c;
             for (c = 0; c < balls; c++) {
             StdDraw.filledCircle(positionx[c], positiony[c], radius); 
-            }
         	StdDraw.show();
+            }
             StdDraw.pause(20);
 	}
 	}
