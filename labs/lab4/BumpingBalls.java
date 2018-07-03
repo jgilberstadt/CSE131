@@ -16,39 +16,33 @@ public class BumpingBalls {
 	if ((balls >= 1) && (balls <= 10)) {
 		StdDraw.setXscale(-1.0, 1.0);
         StdDraw.setYscale(-1.0, 1.0);
-        StdDraw.enableDoubleBuffering();
-        double rx = 0.480, ry = 0.860;
+        
+        double[] velocityx = new double[balls];
+        double[] velocityy = new double[balls];
+        double[] positionx = new double[balls];
+        double[] positiony = new double[balls];
         int b;
         for (b = 0; b < balls; b++) {
-	double[] velocityx = new double[balls];
 			double velx = (Math.random() * .008) + .015;
 	velocityx[b] = velx;
         }
         int e;
         for (e = 0; e < balls; e++) {
-	double[] velocityy = new double[balls];
 			double vely = (Math.random() * .008) + .015;
 	velocityy[e] = vely;
         }
-        double vx = 0.015, vy = 0.023;
         double radius = 0.05;
        int a;
         for (a = 0; a < balls; a++) {
-            double[] positionx = new double[balls];
           double posx = (Math.random() * .9) + .05;
             positionx[a] = posx;
              }
         int d;
         for (d = 0; d < balls; d++) {
-            double[] positiony = new double[balls];
           double posy = (Math.random() * .9) + .05;
             positiony[d] = posy;
              }
         while (true)  { 
-        	double[] positionx;
-            double[] positiony;
-        	double[] velocityx;
-        	double[] velocityy;
             int f;
         	for (f = 0; f < balls; f++) {
         	if (Math.abs(positionx[f] + velocityx[f]) > 1.0 - radius) { 
@@ -60,6 +54,19 @@ public class BumpingBalls {
             positionx[f] = positionx[f] + velocityx[f]; 
             positiony[f] = positiony[f] + velocityy[f]; 
         	}
+        	int g;
+        	int h;
+        	int i;
+        	for (g = 1; g < balls; g++) {
+        	for (h = 0; h < balls - g; h++) {
+        	if (Math.sqrt(Math.abs(Math.pow(positionx[g] + velocityx[g]- positionx[h] - velocityx[h], 2) + Math.pow(positiony[g] + velocityy[g]- positiony[h] - velocityy[h], 2))) < 2 * radius) {
+        	velocityx[g] = -1 * velocityx[g];
+        	velocityy[g] = -1 * velocityy[g];
+        	velocityx[h] = -1 * velocityx[h];
+        	velocityy[h] = -1 * velocityy[h];
+        	}
+        	}	
+        }
             StdDraw.clear(StdDraw.LIGHT_GRAY);
             StdDraw.setPenColor(StdDraw.BLACK); 
             int c;
