@@ -16,6 +16,7 @@ public class BumpingBalls {
 	if ((balls >= 1) && (balls <= 10)) {
 		StdDraw.setXscale(-1.0, 1.0);
         StdDraw.setYscale(-1.0, 1.0);
+        StdDraw.enableDoubleBuffering();
         double rx = 0.480, ry = 0.860;
         int b;
         for (b = 0; b < balls; b++) {
@@ -44,10 +45,21 @@ public class BumpingBalls {
             positiony[d] = posy;
              }
         while (true)  { 
-        	if (Math.abs(rx + vx) > 1.0 - radius) vx = -vx;
-            if (Math.abs(ry + vy) > 1.0 - radius) vy = -vy;
-            rx = rx + vx; 
-            ry = ry + vy; 
+        	double[] positionx;
+            double[] positiony;
+        	double[] velocityx;
+        	double[] velocityy;
+            int f;
+        	for (f = 0; f < balls; f++) {
+        	if (Math.abs(positionx[f] + velocityx[f]) > 1.0 - radius) { 
+        		velocityx[f] = -1 * velocityx[f];
+        	}
+            if (Math.abs(positiony[f] + velocityy[f]) > 1.0 - radius){ 
+            	velocityy[f] = -1 * velocityy[f];
+            }
+            positionx[f] = positionx[f] + velocityx[f]; 
+            positiony[f] = positiony[f] + velocityy[f]; 
+        	}
             StdDraw.clear(StdDraw.LIGHT_GRAY);
             StdDraw.setPenColor(StdDraw.BLACK); 
             int c;
