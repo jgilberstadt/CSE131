@@ -1,0 +1,13 @@
+"StdOut.print(""Please enter your name: "");
+		String name = StdIn.readLine();
+		StdOut.print(""Please enter your age: "");
+		int age = StdIn.readInt();
+		while (age < 0) {
+		StdOut.print(""Age cannot be negative, please enter your age: "");
+		age = StdIn.readInt();	
+	}
+		StdOut.println(""Your name is "" + name + "", and you are "" + age + "" years old."");"
+        
+Great job!
+
+Total: 100 / 100
