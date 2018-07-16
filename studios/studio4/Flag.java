@@ -33,43 +33,43 @@ public class Flag {
 	}
 	int n = 44100;
 	double hz = 440.0;
-	double[] a = new double[(n * 8) + 1];
+	double[] a = new double[n + 1];
 	int j;
 	for (j = 0; j <= n; j++) {
 		a[j] = Math.sin(2 * Math.PI * j * hz / n);
 		}
 	StdAudio.play(a);
-	hz = (double)hz * Math.pow(2, (double)(1/12));
+	hz = hz * ((Math.pow(2, 13.0/12.0)));
 	for (j = 0; j <= n; j++) {
 		a[j] = Math.sin(2 * Math.PI * j * hz / n);
 		}
 	StdAudio.play(a);
-	hz = (double) hz * Math.pow(2, (double)(1/12));
+	hz = hz * (Math.pow(2, 13) / (Math.pow(2, 13.0/12.0)));
 	for (j = 0; j <= n; j++) {
 		a[j] = Math.sin(2 * Math.PI * j * hz / n);
 		}
 	StdAudio.play(a);
-	hz = (double)hz * Math.pow(2, (double)(1/12));
+	hz = hz * (Math.pow(2, 13) / (Math.pow(2, 12)));
 	for (j = 0; j <= n; j++) {
 		a[j] = Math.sin(2 * Math.PI * j * hz / n);
 		}
 	StdAudio.play(a);
-	hz = (double)hz * Math.pow(2, (double)(1/12));
+	hz = hz * (Math.pow(2, 13) / (Math.pow(2, 12)));
 	for (j = 0; j <= n; j++) {
 		a[j] = Math.sin(2 * Math.PI * j * hz / n);
 		}
 	StdAudio.play(a);
-	hz = (double)hz * Math.pow(2, (double)(1/12));
+	hz = hz * (Math.pow(2, 13) / (Math.pow(2, 12)));
 	for (j = 0; j <= n; j++) {
 		a[j] = Math.sin(2 * Math.PI * j * hz / n);
 		}
 	StdAudio.play(a);
-	hz = (double)hz * Math.pow(2, (double)(1/12));
+	hz = hz * (Math.pow(2, 13) / (Math.pow(2, 12)));
 	for (j = 0; j <= n; j++) {
 		a[j] = Math.sin(2 * Math.PI * j * hz / n);
 		}
 	StdAudio.play(a);
-	hz = (double)hz * Math.pow(2, (double)(1/12));
+	hz = hz * (Math.pow(2, 13) / (Math.pow(2, 12)));
 	for (j = 0; j <= n; j++) {
 		a[j] = Math.sin(2 * Math.PI * j * hz / n);
 		}

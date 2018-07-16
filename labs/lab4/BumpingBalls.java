@@ -55,12 +55,15 @@ public class BumpingBalls {
             positiony[f] = positiony[f] + velocityy[f]; 
         	}
         	int g;
+        	int h;
         	for (g = 0; g < balls - 1; g++) {
-        	if (Math.sqrt(Math.abs(Math.pow(positionx[g] + velocityx[g]- positionx[g + 1] - velocityx[g + 1], 2) + Math.pow(positiony[g] + velocityy[g]- positiony[g + 1] - velocityy[g + 1], 2))) < 2 * radius) {
+        	for (h = g + 1; h < balls; h++) {
+        	if (Math.sqrt(Math.abs(Math.pow(positionx[g] + velocityx[g]- positionx[h] - velocityx[h], 2) + Math.pow(positiony[g] + velocityy[g]- positiony[h] - velocityy[h], 2))) < 2 * radius) {
         	velocityx[g] = -1 * velocityx[g];
         	velocityy[g] = -1 * velocityy[g];
-        	velocityx[g + 1] = -1 * velocityx[g + 1];
-        	velocityy[g + 1] = -1 * velocityy[g + 1];
+        	velocityx[h] = -1 * velocityx[h];
+        	velocityy[h] = -1 * velocityy[h];
+        	}
         	}	
         }
             StdDraw.clear(StdDraw.LIGHT_GRAY);
@@ -70,7 +73,7 @@ public class BumpingBalls {
             StdDraw.filledCircle(positionx[c], positiony[c], radius); 
             }
             StdDraw.show();
-            StdDraw.pause(1);
+            StdDraw.pause(5);
 	}
 	}
 }

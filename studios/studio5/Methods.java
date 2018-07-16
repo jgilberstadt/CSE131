@@ -39,9 +39,13 @@ return (x + y + z) / 3;
 public static double sumArray(double[] sum) {
 	double x = 3;
 	double j = 0;
-	for (double i = 0; i < x; i++) {
-		j = j + sum[(int) i];
+	for (int i = 0; i < x; i++) {
+		j = j + sum[i];
 	}
 		return j;
 }
+public static double average(double y) {
+	sumArray; 
+	
+		}
 }
