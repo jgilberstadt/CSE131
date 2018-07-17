@@ -10,20 +10,40 @@ public class Methods {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int x = 56;
+		int xf = 99;
+		int x = 2;
+		int y = 3;
 		//
 		// from here, call f or g with the appropriate parameters
 		//
-		f(x);
+		f(xf);
+		g(x, y);
+	System.out.println(g(x, y));
 	}
 
-	private static void f(int x) {
-		// TODO Auto-generated method stub
-		if (x > 100) 
-		System.out.println(x - 10);
+	private static int g(int x, int y) {
+		if (x == 0) 
+	return y + 1;
+	if ((x > 0)&&(x == y)) 
+		return g(x - 1, 1);
+	if ((x > 0)&&(y > 0)) 
+		return g(x - 1, g(x, y - 1));
+	else
+		return 0;
+	}
 	
-	if (x <= 100)
-		f(x + 11);
+
+	private static void g(int x, Object g) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void f(int xf) {
+		if (xf > 100) 
+		System.out.println(xf - 10);
+	
+	if (xf <= 100)
+		f(xf + 11);
 	}
 
 }
