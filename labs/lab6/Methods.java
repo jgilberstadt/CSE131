@@ -24,7 +24,7 @@ public class Methods {
 	private static int g(int x, int y) {
 		if (x == 0) 
 	return y + 1;
-	if ((x > 0)&&(x == y)) 
+	if ((x > 0)&&(y == 0)) 
 		return g(x - 1, 1);
 	if ((x > 0)&&(y > 0)) 
 		return g(x - 1, g(x, y - 1));
