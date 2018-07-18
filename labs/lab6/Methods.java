@@ -31,13 +31,6 @@ public class Methods {
 	else
 		return 0;
 	}
-	
-
-	private static void g(int x, Object g) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	private static void f(int xf) {
 		if (xf > 100) 
 		System.out.println(xf - 10);
