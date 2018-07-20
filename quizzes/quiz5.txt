@@ -1,0 +1,20 @@
+"public static void main(String[] args) {
+	double r = 1;
+		circleArea(r);
+	}
+		private static double circleArea(double r) {
+if (r > 0)
+	System.out.println(""Area of circle = "" + Math.PI * r * r);
+return 0;
+}
+
+You have printed out the answer, but returned the value of zero. This means that whatever number is given to the method, you are saying the area will be zero. A number that is printed cannot be used later in the program. A number that is returned, can. (-10)
+
+		}"	
+        double x = circleArea(5.2);	
+        TRUE	
+        FALSE	
+        TRUE	(we have seen examples of methods without input parameters in previous exercises. Go back and see if you can find them -10)
+        FALSE
+        
+        Total: 80 / 100
