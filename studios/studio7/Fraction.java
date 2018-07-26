@@ -6,14 +6,16 @@ package studio7;
  */
 public class Fraction {
 	//fraction has-a
-	private final int numerator, denominator;
+	private final int numerator, denominator, numadd, denadd;
 	/**
 	 * numerator
 	 * denominator
 	 */
-	public Fraction(int r, int s) {
+	public Fraction(int r, int s, int t, int u) {
 	this.numerator = r;
 	this.denominator = s;
+	this.numadd = t;
+	this.denadd = u;
 	}
 	/**
 	 * fraction
@@ -26,14 +28,14 @@ public class Fraction {
 	 * 
 	 */
 	public String add() {
-	return numerator + " / " + denominator + " + a / b = (" + numerator + "b + " + denominator + "a) / " + denominator + "b";
+	return (numerator * denadd + denominator * numadd) + " / " + denominator * denadd;
 	}
 	/**
 	 * multiplication
 	 * 
 	 */
 	public String multiply() {
-	return numerator + " / " + denominator + " * a / b = " + numerator + "a / " + denominator + "b";
+	return numerator * numadd + " / " + denominator * denadd;
 	}
 	/**
 	 * reciprocal
@@ -63,8 +65,8 @@ public class Fraction {
 	}
 	
 	public static void main(String[] args) {
-	Fraction f = new Fraction (12, 48);
-	System.out.println("How do we know that out fraction is a fraction? " + f);
+	Fraction f = new Fraction (12, 48, 4, 7);
+	System.out.println("How do we know that our fraction is a fraction? " + f);
 	}
 
 }
