@@ -1,0 +1,19 @@
+12321	
+5	
+11	
+"public static int pascal(int x, int y) {
+if (x == 0) {
+	return 1;
+}else if (y == 0) {
+	return 1;
+}else if ((x > 0)&&(y > 0)) {
+	return pascal(x, y - 1) + pascal(x - 1, y);
+}else {
+	return 0;
+}
+		
+}"
+
+Great job!
+
+Total: 100 / 100
