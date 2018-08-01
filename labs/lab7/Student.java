@@ -72,11 +72,7 @@ public class Student {
 		return this.GPA;
 	}
 
-
-//	public static void main(String[] args) {
-//	Student s = new Student (38, 3.54, 3.7, 3, "Sam", "Smith", "Jenny", "Johnson", 126, 122, 471835, 274824, 3.46, 3.58, null, null);
-//	System.out.println("Student Profile? " + s);
-//	}
+	public static voic main(String[] args) {
+	Student s = new Student (A, B, 37);
 	}
-
 

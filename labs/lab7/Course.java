@@ -95,7 +95,7 @@ public class Course {
 	}
 	
 	public static void main(String[] args) {
-	Course c = new Course(Algebra, 3, 3, 10, Andrew, Beth, Carl, Dana, Evan, Frank, Gilbert, Hallie, Isaac, Me);
+	Course c = new Course(Algebra, 3, 3);
 
 	}
 
