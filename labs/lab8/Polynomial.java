@@ -14,30 +14,49 @@ public class Polynomial {
 		//
 		// Set the instance variable (list) to be a new linked list of Double type
 		//
-		list = null;   // FIXME
+		this.list = new LinkedList<Double>();   // FIXME
 	}
-
+	
 	public String toString() {
-		return "A polynomial"; // FIXME
+		return Double.toString(evaluate(7)); // FIXME
 	}
 
 	public Polynomial addTerm(double coeff) {
-		//
-		// FIXME
-		//
+		list.add(coeff);
 		return this;  // required by lab spec
 	}
 
 	public double evaluate(double x) {
-		return Math.random();  // FIXME
+		double sum = 0.0;
+		for (int i = this.list.size() - 1; i >= 0; i--) {
+			sum = sum * x + list.get(i);
+		}
+		return sum;  // FIXME
 	}
 	
 	public Polynomial derivative() {
-		return null;   // FIXME
+		Polynomial a = new Polynomial();
+		for (int i = 1; i < list.size(); i++) {
+		a.addTerm(list.get(i) * i);	
+			}
+		return a;   // FIXME
 	}
 	
 	public Polynomial sum(Polynomial another) {
-		return null;   // FIXME
+		Polynomial p = new Polynomial();
+		for (int i = 0; i < Math.min(this.list.size(), another.list.size()); i++) {
+		p.addTerm(another.list.get(i) + this.list.get(i));
+		}
+		if (this.list.size() > another.list.size()){
+		for (int i = another.list.size(); i < this.list.size(); i++) {
+			p.addTerm(this.list.get(i));
+		}
+		}else {
+			for (int i = this.list.size(); i < another.list.size(); i++) {
+			p.addTerm(another.list.get(i));
+		}
+		}
+		return p;   // FIXME
 	}
 
 	/**
