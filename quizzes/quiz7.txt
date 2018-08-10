@@ -1,0 +1,65 @@
+"public class Car {
+
+private double fuel, odometer;
+
+public Car(double a, double b) {
+this.fuel = a;
+this.odometer = b;
+}
+
+public String fillUp(double f) {
+this.fuel = this.fuel + f;
+return "" "";
+}
+
+public double drive(double m, double g) {
+this.odometer = this.odometer + m;
+this.fuel = this.fuel - g;
+return ""this car's odometer reads "" + this.odometer + "" miles and contains "" + this.fuel + "" gallons of fuel."";
+}
+}"	
+
+It is not necessary for every method to return something. Consider: does returning a " " help your program achieve its goals? If not, then take it out. (-5)
+
+
+
+"public class Car {
+
+private double fuel, odometer;
+
+public Car(double a, double b) {
+this.fuel = a;
+this.odometer = b;
+}
+
+public String fillUp(double f) {
+this.fuel = this.fuel + f;
+return "" "";
+}
+
+public String drive(double m, double g) {
+this.odometer = this.odometer + m;
+this.fuel = this.fuel - g;
+return ""this car's odometer reads "" + this.odometer + "" miles and contains "" + this.fuel + "" gallons of fuel."";
+}
+
+
+public String toString() {
+return ""After adding 10 gallons of fuel to the tank and consuming 1.5 gallons of fuel on a 45 mile drive,"" + fillUp(10) + drive(45, 1.5);  
+}
+
+public static void main(String[] args) {
+	Car c = new Car(0, 0);
+	System.out.println(c);
+}
+
+}
+"
+
+The toString() method should do nothing besides return a String representation of the object. By using fillUp and drive within toString, you are modifying your object. This means that you can print out the same object twice in a row and it will say something different each time, which is surprising behavior.
+
+Instead, use the methods that you wrote on the object you created: c.fillUp(10);
+
+(-15)
+
+Total: 80 / 100
