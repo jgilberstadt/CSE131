@@ -42,8 +42,18 @@ public class Blackjack {
 		int move = ap.nextInt("Press 1 to hit or 0 to stand");
 		if (move == 0) {
 		System.out.println("You chose to stand!");
-	}else if (move == 1){
+		System.out.println();
+		} 
+		while ((move == 1)&&(score[0] < 22)) {
 		System.out.println("You hit!");
+		int card3 = (int) (13 * Math.random());
+		if (card3 == 0) {
+			score[0] = score[0] + 11;
+			}else if ((card3 > 0)&&(card3 < 9)) {
+			score[0] = score[0] + card3 + 1;
+			}else {
+			score[0] = score[0] + 10;
+			}
 	}
 	}
 }
