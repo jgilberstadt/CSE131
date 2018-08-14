@@ -55,7 +55,7 @@ public class Eyeballs {
 					StdDraw.setPenColor(StdDraw.RED);
 				StdDraw.filledCircle(eyecenters[j][0] + 0.0225 * (StdDraw.mouseX() - eyecenters[j][0]) / Math.sqrt(Math.pow(StdDraw.mouseX() - eyecenters[j][0], 2) + Math.pow(StdDraw.mouseY() - eyecenters[j][1], 2)), eyecenters[j][1] + 0.0225 * (StdDraw.mouseY() - eyecenters[j][1]) / Math.sqrt(Math.pow(StdDraw.mouseX() - eyecenters[j][0], 2) + Math.pow(StdDraw.mouseY() - eyecenters[j][1], 2)), 0.0075);	
 				}
-				StdDraw.show(50);
+				StdDraw.show(20);
 			}
 		}
 }
