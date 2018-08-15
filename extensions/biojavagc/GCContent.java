@@ -1,11 +1,13 @@
 package biojavagc;
 
 import java.io.File;
+import java.util.Arrays;
 
 import org.biojava3.core.sequence.DNASequence;
 import org.biojava3.core.sequence.ProteinSequence;
 
 import biojava.SequenceLoader;
+import javafx.scene.text.Text;
 
 public class GCContent {
 	
@@ -63,9 +65,16 @@ public class GCContent {
 	 */
 	public static double percentGC(char[] seq) {
 		double ans = 0.0;
-		// FIXME set ans to the percentage of GC in seq
-		//
-		return ans;
+		String CG = "CG";
+		if (seq.length > 0) {
+			for (int i = 0; i < seq.length; i++) {
+				if ((seq[i] == CG.charAt(0))||(seq[i] == CG.charAt(1))) {
+				ans = ans + 1;	
+				}
+			}
+		return 100 * ans / seq.length;
+		}else {
+		return 0;	
+		}
 	}
-
 }
